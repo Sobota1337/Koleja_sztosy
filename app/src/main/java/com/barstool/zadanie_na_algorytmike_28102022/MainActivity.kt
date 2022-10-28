@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import java.util.LinkedList
 
 class MainActivity : AppCompatActivity() {
@@ -30,8 +31,19 @@ class MainActivity : AppCompatActivity() {
             }
         }
         StosUsun.setOnClickListener {
-            liczby.removeFirst()
-            napis.text = liczby.first.toString()
+            if (liczby.isEmpty()){
+                StosUsun.isEnabled = false
+            }
+            else{
+                liczby.removeLast()
+                if(liczby.isEmpty()){
+                    napis.text = ""
+                }
+                else{
+                    napis.text = liczby.last.toString()
+                }
+
+            }
         }
     }
 }
