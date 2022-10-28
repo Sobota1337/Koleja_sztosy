@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             }
             else {
                 liczby.add(Wprowadzaniestos.text.toString().toInt())
-                napis.text = liczby.
+                napis.text = liczby.last.toString()
             }
         }
         StosUsun.setOnClickListener {
