@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import java.util.LinkedList
+import java.util.Queue
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -40,8 +41,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     napis.text = liczby.last.toString()
                 }
-
-
         }
+        /**----------------------KOLEJKA---------------------**/
+        val kolejka: Queue<Int> = LinkedList<Int>()
+        val KolejkaDodaj = findViewById<Button>(R.id.btnDodajKolejka)
+        val KolejkaUsun = findViewById<Button>(R.id.btnUsunKolejka)
+        val KolejkaZawartosc = findViewById<Button>(R.id.btnZawartoscKolejka)
+        val wprowadzanieKolejka = findViewById<EditText>(R.id.KolejkaWpisz)
+        val napiss = findViewById<TextView>(R.id.napis3)
+
+
     }
 }
