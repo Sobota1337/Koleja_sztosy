@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val Wprowadzaniestos = findViewById<EditText>(R.id.stosWpisz)
         StosDodaj.setOnClickListener {
             if (liczby.isEmpty()){
+                StosUsun.isEnabled = true
                 liczby.addFirst(Wprowadzaniestos.text.toString().toInt())
                 napis.text = liczby.first.toString()
             }
@@ -31,19 +32,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
         StosUsun.setOnClickListener {
-            if (liczby.isEmpty()){
-                StosUsun.isEnabled = false
-            }
-            else{
                 liczby.removeLast()
                 if(liczby.isEmpty()){
                     napis.text = ""
+                    StosUsun.isEnabled = false
                 }
                 else{
                     napis.text = liczby.last.toString()
                 }
 
-            }
+
         }
     }
 }
