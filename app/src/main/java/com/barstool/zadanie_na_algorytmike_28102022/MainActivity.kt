@@ -47,9 +47,22 @@ class MainActivity : AppCompatActivity() {
         val KolejkaDodaj = findViewById<Button>(R.id.btnDodajKolejka)
         val KolejkaUsun = findViewById<Button>(R.id.btnUsunKolejka)
         val KolejkaZawartosc = findViewById<Button>(R.id.btnZawartoscKolejka)
+        val Kolejka1element = findViewById<Button>(R.id.btnKolejka1)
         val wprowadzanieKolejka = findViewById<EditText>(R.id.KolejkaWpisz)
         val napiss = findViewById<TextView>(R.id.napis3)
 
-
+        KolejkaZawartosc.setOnClickListener {
+            napiss.text = kolejka.toString()
+        }
+        Kolejka1element.setOnClickListener {
+            var pierwszy = kolejka.peek()
+            napiss.text = pierwszy.toString()
+        }
+        KolejkaDodaj.setOnClickListener {
+            kolejka.add(wprowadzanieKolejka.text.toString().toInt())
+        }
+        KolejkaUsun.setOnClickListener {
+            kolejka.poll()
+        }
     }
 }
