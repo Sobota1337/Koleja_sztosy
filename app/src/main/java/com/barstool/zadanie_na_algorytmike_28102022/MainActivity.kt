@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val StosDodaj = findViewById<Button>(R.id.btnDodajStos)
         val StosUsun = findViewById<Button>(R.id.btnUsunStos)
-        val OstElement = findViewById<Button>(R.id.btnOstStos)
+        val OstElementand1 = findViewById<Button>(R.id.btnOstStos)
         val napis = findViewById<TextView>(R.id.napis2)
         var liczby = LinkedList<Int>();
         val Wprowadzaniestos = findViewById<EditText>(R.id.stosWpisz)
@@ -48,12 +48,13 @@ class MainActivity : AppCompatActivity() {
                     napis.text = liczby.last.toString()
                 }
         }
-        OstElement.setOnClickListener {
+        OstElementand1.setOnClickListener {
             if (liczby.isEmpty()){
                 Toast.makeText(baseContext, "Nie ma", Toast.LENGTH_SHORT).show()
             }
             else{
-                napis.text = liczby.last.toString()
+                napis.text = liczby.last.toString() + " " + liczby.first.toString()
+
             }
         }
         /**----------------------KOLEJKA---------------------**/

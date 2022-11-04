@@ -138,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="224dp"
-        android:text="ostatni element"
+        android:text="ostatni element i 1 element"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
