@@ -24,10 +24,10 @@
         android:text="stos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/napis"
@@ -50,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.866"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <TextView
         android:id="@+id/napis3"
@@ -71,10 +71,10 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <EditText
         android:id="@+id/KolejkaWpisz"
@@ -93,7 +93,7 @@
         android:id="@+id/btnDodajStos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="156dp"
         android:text="Dodaj"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.105"
@@ -126,10 +126,10 @@
         android:id="@+id/btnUsunStos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="156dp"
         android:text="Usun"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -137,10 +137,10 @@
         android:id="@+id/btnOstStos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="224dp"
         android:text="ostatni element"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
