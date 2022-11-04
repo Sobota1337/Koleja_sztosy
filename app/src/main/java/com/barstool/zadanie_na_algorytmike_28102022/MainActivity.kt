@@ -22,14 +22,19 @@ class MainActivity : AppCompatActivity() {
         var liczby = LinkedList<Int>();
         val Wprowadzaniestos = findViewById<EditText>(R.id.stosWpisz)
         StosDodaj.setOnClickListener {
-            if (liczby.isEmpty()){
-                StosUsun.isEnabled = true
-                liczby.addFirst(Wprowadzaniestos.text.toString().toInt())
-                napis.text = liczby.first.toString()
+            if(Wprowadzaniestos.text.toString() != ""){
+                if (liczby.isEmpty()){
+                    StosUsun.isEnabled = true
+                    liczby.addFirst(Wprowadzaniestos.text.toString().toInt())
+                    napis.text = liczby.first.toString()
+                }
+                else {
+                    liczby.add(Wprowadzaniestos.text.toString().toInt())
+                    napis.text = liczby.last.toString()
+                }
             }
-            else {
-                liczby.add(Wprowadzaniestos.text.toString().toInt())
-                napis.text = liczby.last.toString()
+            else{
+                Toast.makeText(baseContext, "Podaj jakas ilosc", Toast.LENGTH_SHORT).show()
             }
         }
         StosUsun.setOnClickListener {
