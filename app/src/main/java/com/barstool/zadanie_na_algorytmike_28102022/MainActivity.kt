@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
             napiss.text = pierwszy.toString()
         }
         KolejkaDodaj.setOnClickListener {
+            if(wprowadzanieKolejka.text.toString() != "")
             kolejka.add(wprowadzanieKolejka.text.toString().toInt())
         }
         KolejkaUsun.setOnClickListener {
