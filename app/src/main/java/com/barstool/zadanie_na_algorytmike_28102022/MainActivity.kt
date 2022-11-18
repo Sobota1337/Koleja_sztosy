@@ -11,7 +11,6 @@ import java.util.LinkedList
 import java.util.Queue
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,10 +23,10 @@ class MainActivity : AppCompatActivity() {
         val Wprowadzaniestos = findViewById<EditText>(R.id.stosWpisz)
         StosDodaj.setOnClickListener {
             if(Wprowadzaniestos.text.toString() != ""){
-                if (liczby.isEmpty()){
+                if (liczby.isNotEmpty()){
+                    liczby.add(Wprowadzaniestos.text.toString().toInt())
+                    napis.text = liczby.last.toString()
                     StosUsun.isEnabled = true
-                    liczby.addFirst(Wprowadzaniestos.text.toString().toInt())
-                    napis.text = liczby.first.toString()
                 }
                 else {
                     liczby.add(Wprowadzaniestos.text.toString().toInt())
@@ -40,12 +39,14 @@ class MainActivity : AppCompatActivity() {
         }
         StosUsun.setOnClickListener {
                 liczby.removeLast()
-                if(liczby.isEmpty()){
+                if(liczby.isNotEmpty()){
                     napis.text = ""
                     StosUsun.isEnabled = false
+                    napis.text = liczby.last.toString()
                 }
                 else{
-                    napis.text = liczby.last.toString()
+                    napis.text = ""
+                    StosUsun.isEnabled = false
                 }
         }
         OstElementand1.setOnClickListener {
@@ -74,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             napiss.text = pierwszy.toString()
         }
         KolejkaDodaj.setOnClickListener {
-            if(wprowadzanieKolejka.text.toString() != "")
+
             kolejka.add(wprowadzanieKolejka.text.toString().toInt())
         }
         KolejkaUsun.setOnClickListener {
