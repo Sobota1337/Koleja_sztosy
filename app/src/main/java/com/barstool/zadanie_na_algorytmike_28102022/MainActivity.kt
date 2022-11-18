@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val StosDodaj = findViewById<Button>(R.id.btnDodajStos)
-        val StosUsun = findViewById<Button>(R.id.btnUsunStos)
-        val OstElementand1 = findViewById<Button>(R.id.btnOstStos)
-        val napis = findViewById<TextView>(R.id.napis2)
+        val StosDodaj = findViewById<Button>(R.id.DodajdoStosu)
+        val StosUsun = findViewById<Button>(R.id.UsunzeStosu)
+        val OstElementand1 = findViewById<Button>(R.id.pIostatniele)
+        val napis = findViewById<TextView>(R.id.stos)
         var liczby = LinkedList<Int>();
         val Wprowadzaniestos = findViewById<EditText>(R.id.stosWpisz)
         StosDodaj.setOnClickListener {
@@ -59,12 +59,12 @@ class MainActivity : AppCompatActivity() {
         }
         /**----------------------KOLEJKA---------------------**/
         val kolejka: Queue<Int> = LinkedList<Int>()
-        val KolejkaDodaj = findViewById<Button>(R.id.btnDodajKolejka)
-        val KolejkaUsun = findViewById<Button>(R.id.btnUsunKolejka)
-        val KolejkaZawartosc = findViewById<Button>(R.id.btnZawartoscKolejka)
-        val Kolejka1element = findViewById<Button>(R.id.btnKolejka1)
+        val KolejkaDodaj = findViewById<Button>(R.id.Dodajdokolejki)
+        val KolejkaUsun = findViewById<Button>(R.id.Usunzkolejki)
+        val KolejkaZawartosc = findViewById<Button>(R.id.zawartosckolejki)
+        val Kolejka1element = findViewById<Button>(R.id.pier_ele_kolejki)
         val wprowadzanieKolejka = findViewById<EditText>(R.id.KolejkaWpisz)
-        val napiss = findViewById<TextView>(R.id.napis3)
+        val napiss = findViewById<TextView>(R.id.kolejka)
 
         KolejkaZawartosc.setOnClickListener {
             napiss.text = kolejka.toString()
